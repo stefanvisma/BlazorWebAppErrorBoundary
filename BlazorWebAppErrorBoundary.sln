@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36121.58 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAppErrorBoundary", "BlazorWebAppErrorBoundary\BlazorWebAppErrorBoundary\BlazorWebAppErrorBoundary.csproj", "{EA67C131-BB01-49B2-B06C-2F751DC013C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAppErrorBoundary.Client", "BlazorWebAppErrorBoundary\BlazorWebAppErrorBoundary.Client\BlazorWebAppErrorBoundary.Client.csproj", "{19030320-C54B-4C57-89DF-272A54A351D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA67C131-BB01-49B2-B06C-2F751DC013C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA67C131-BB01-49B2-B06C-2F751DC013C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA67C131-BB01-49B2-B06C-2F751DC013C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA67C131-BB01-49B2-B06C-2F751DC013C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19030320-C54B-4C57-89DF-272A54A351D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19030320-C54B-4C57-89DF-272A54A351D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19030320-C54B-4C57-89DF-272A54A351D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19030320-C54B-4C57-89DF-272A54A351D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B93B3BF9-25B3-4061-9DA0-EB5D3F451793}
+	EndGlobalSection
+EndGlobal

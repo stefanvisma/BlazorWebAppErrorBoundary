@@ -1,0 +1,19 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+<p>
+    This app is based on the <b>Blazor Web App</b> project template using <b>Global Auto Interactive render mode</b>.
+</p>
+<p>
+    The app demonstrates the use of the <b>ErrorBoundary</b> component for <b>global error handling</b>.
+</p>
+
+<p>Rendering location: @RendererInfo.Name</p>
+<p>Assigned render mode: @AssignedRenderMode</p>
+@if (!RendererInfo.IsInteractive)
+{
+    <p>Not interactive...</p>
+}

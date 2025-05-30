@@ -1,0 +1,56 @@
+﻿@page "/weather-ant"
+@using BlazorWebAppErrorBoundary.Client.Models
+@using BlazorWebAppErrorBoundary.Client.Services
+@inject IWeatherService WeatherService
+
+<PageTitle>Weather using Ant components</PageTitle>
+
+<h1>Weather using Ant components</h1>
+
+<p>This component demonstrates loading data using <b>Ant components</b>.</p>
+<p>
+    Loading data with error will trigger an exception on the server to simulate an unexpected error. 
+    This is expected to be caught by global error handling using an ErrorBoundary component.
+</p>
+
+<p>Rendering location: @RendererInfo.Name</p>
+<p>Assigned render mode: @AssignedRenderMode</p>
+@if (!RendererInfo.IsInteractive)
+{
+    <p>Not interactive...</p>
+}
+
+<p>    
+    <Button @onclick="LoadData">Load data</Button>
+    <Button @onclick="LoadDataWithError">Load data with error</Button>
+</p>
+
+<Table TItem="WeatherForecast" DataSource="@forecasts">
+    <PropertyColumn Property="c => c.Date">
+        @context.Date
+    </PropertyColumn>
+    <PropertyColumn Property="c => c.TemperatureC">
+        @context.TemperatureC
+    </PropertyColumn>
+    <PropertyColumn Property="c => c.Summary">
+        @context.Summary
+    </PropertyColumn>
+    <PropertyColumn Property="c => c.TemperatureF">
+        @context.TemperatureF
+    </PropertyColumn>
+</Table>
+
+
+@code {
+    private WeatherForecast[] forecasts = new WeatherForecast[] { };    
+
+    private async Task LoadData()
+    {
+        forecasts = await WeatherService.GetWeather(false);
+    }
+
+    private async Task LoadDataWithError()
+    {
+        forecasts = await WeatherService.GetWeather(true);
+    }
+}
